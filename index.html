@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vish Magapu — CTO / VP Engineering · AI & Large-Scale Platforms</title>
+<meta name="description" content="Vish Magapu — engineering executive. 25+ years building complex platforms and global engineering organizations: Amazon, Walmart, Yahoo, Paytm, Mercari. Founder & CTO, MoneyCompass.">
+<link rel="canonical" href="https://vishmagapu.pages.dev/">
+<style>
+  :root{
+    --blue:#1F4E79; --blue-light:#2e6aa3; --ink:#1a1d21; --muted:#5a6472;
+    --line:#e3e7ec; --bg:#ffffff; --bg-soft:#f6f8fa; --accent:#c8a24a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Hero */
+  header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--muted);margin-bottom:14px}
+  h1{font-size:46px;letter-spacing:-.01em;line-height:1.1;color:var(--blue);font-weight:800}
+  .headline{font-size:21px;margin-top:10px;color:var(--ink);font-weight:600}
+  .sub{margin-top:14px;color:var(--muted);max-width:720px}
+  .contact{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+  .contact strong{color:var(--ink);font-weight:600}
+
+  /* Metrics */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:40px 0}
+  .metric{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:22px 18px}
+  .metric b{display:block;font-size:26px;color:var(--blue);font-weight:800;letter-spacing:-.01em}
+  .metric span{font-size:13.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
+
+  /* Hero photo */
+  .hero-grid{display:flex;gap:36px;align-items:flex-start;justify-content:space-between}
+  .hero-text{flex:1;min-width:0}
+  .headshot{width:148px;height:148px;border-radius:50%;object-fit:cover;object-position:center 15%;border:4px solid var(--bg-soft);box-shadow:0 2px 14px rgba(31,78,121,.18);flex-shrink:0;margin-top:8px}
+  @media(max-width:640px){.hero-grid{flex-direction:column-reverse}.headshot{width:104px;height:104px}}
+
+  /* Milestone timeline */
+  .tband{margin:36px 0 6px}
+  .mtl-scroll{overflow-x:auto;padding-bottom:4px}
+  .mtl{display:flex;min-width:880px;position:relative;padding:18px 10px 0 0}
+  .mtl::before{content:"";position:absolute;top:24px;left:4%;right:4%;height:3px;background:var(--line);border-radius:2px}
+  .mtl-item{flex:1;text-align:center;position:relative;padding:22px 4px 0;min-width:88px}
+  .mtl-item::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:var(--dot,var(--blue));border:3px solid #fff;box-shadow:0 0 0 2px var(--dot,var(--blue))}
+  .mtl-item .yr{font-size:11px;color:var(--muted);letter-spacing:.05em;display:block}
+  .mtl-item .co{font-size:13px;font-weight:700;color:var(--ink);display:block;line-height:1.25;margin-top:2px}
+  .mtl-item .rl{font-size:11.5px;color:var(--blue);display:block;line-height:1.3;margin-top:2px;font-weight:600}
+  .tband-caption{font-size:12.5px;color:var(--muted);margin-top:16px;letter-spacing:.04em}
+
+  /* Sections */
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:24px;font-weight:700}
+  .lede{font-size:18.5px;max-width:800px}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:28px}
+  .pillar{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+  .pillar h3{font-size:15.5px;color:var(--blue);margin-bottom:8px;font-weight:700}
+  .pillar p{font-size:15px;color:var(--muted)}
+
+  /* Timeline */
+  .role{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+  .role:first-of-type{border-top:none}
+  .when{font-size:14px;color:var(--muted);padding-top:3px}
+  .when em{display:block;font-style:normal;font-size:12.5px;margin-top:2px}
+  .role h3{font-size:17.5px;font-weight:700}
+  .role h3 span{color:var(--muted);font-weight:500}
+  .tagline{color:var(--blue);font-weight:600;font-size:15px;margin:3px 0 8px}
+  .role ul{list-style:none}
+  .role li{font-size:15px;color:var(--muted);padding-left:16px;position:relative;margin-top:5px}
+  .role li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--blue-light)}
+  .role li b{color:var(--ink);font-weight:600}
+
+  /* MoneyCompass spotlight */
+  .spotlight{background:var(--blue);border-radius:12px;color:#fff;padding:34px 36px;margin-top:8px}
+  .spotlight h3{font-size:20px;font-weight:700}
+  .spotlight p{margin-top:10px;color:#dce7f2;font-size:15.5px;max-width:760px}
+  .spotlight a{color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.5)}
+  .spotlight a:hover{text-decoration:none;border-bottom-color:#fff}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{font-size:12.5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;color:#eaf1f8}
+
+  /* Credentials */
+  .creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .cred{border-left:3px solid var(--blue);padding:4px 0 4px 18px}
+  .cred h3{font-size:15.5px;font-weight:700}
+  .cred p{font-size:14.5px;color:var(--muted);margin-top:4px}
+
+  footer{padding:44px 0 64px;color:var(--muted);font-size:14.5px}
+  footer .cta{font-size:19px;color:var(--ink);font-weight:600;margin-bottom:10px}
+
+  @media(max-width:640px){
+    h1{font-size:34px}
+    .role{grid-template-columns:1fr;gap:4px}
+    header{padding:48px 0 32px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="kicker">San Jose, California · U.S. Citizen</div>
+        <h1>Vish Magapu</h1>
+        <div class="headline">CTO / VP Engineering — AI &amp; Large-Scale Platforms · Global Engineering Leader</div>
+        <p class="sub">Engineering executive with 25+ years building complex platforms and large engineering organizations at marquee companies — Amazon, Walmart, Yahoo, and Asia's largest consumer platforms, Paytm and Mercari. Currently Founder &amp; CTO of an AI-native product, writing production code daily across the agentic stack.</p>
+      </div>
+      <img class="headshot" src="headshot.jpg" alt="Vish Magapu" onerror="this.remove()">
+    </div>
+
+    <div class="tband" aria-label="Career timeline 1997 to present">
+      <div class="mtl-scroll">
+        <div class="mtl">
+          <div class="mtl-item" style="--dot:#8ea7bd"><span class="yr">1997–2007</span><span class="co">Silicon Valley</span><span class="rl">NASA · Schwab · Instantis</span></div>
+          <div class="mtl-item" style="--dot:#6c8fb0"><span class="yr">2007–2010</span><span class="co">Amazon</span><span class="rl">Manager III, Kindle Digital Platform</span></div>
+          <div class="mtl-item" style="--dot:#5d84a8"><span class="yr">2010–2013</span><span class="co">HomeShop18</span><span class="rl">Founding CTO</span></div>
+          <div class="mtl-item" style="--dot:#4f7aa0"><span class="yr">2013–2014</span><span class="co">Yahoo</span><span class="rl">Director of Engineering</span></div>
+          <div class="mtl-item" style="--dot:#427098"><span class="yr">2015–2016</span><span class="co">Novopay</span><span class="rl">Founding CTO</span></div>
+          <div class="mtl-item" style="--dot:#356690"><span class="yr">2016–2020</span><span class="co">Walmart &amp; Flipkart</span><span class="rl">Senior Director</span></div>
+          <div class="mtl-item" style="--dot:#2a5b85"><span class="yr">2020–2022</span><span class="co">Paytm</span><span class="rl">SVP of Engineering</span></div>
+          <div class="mtl-item" style="--dot:#1F4E79"><span class="yr">2023–2025</span><span class="co">Mercari</span><span class="rl">Head of Global Engineering</span></div>
+          <div class="mtl-item" style="--dot:#c8a24a"><span class="yr">2025–now</span><span class="co">MoneyCompass</span><span class="rl">Founder &amp; CTO</span></div>
+        </div>
+      </div>
+      <div class="tband-caption">Three decades, one arc: Silicon Valley systems engineering → global platform leadership across the US, India, and Japan → AI-native founder.</div>
+    </div>
+
+    <div class="contact">
+      <span><strong>Email</strong> · <a href="mailto:vmagapu@gmail.com">vmagapu@gmail.com</a></span>
+      <span><strong>LinkedIn</strong> · <a href="https://linkedin.com/in/magapu" target="_blank" rel="noopener">linkedin.com/in/magapu</a></span>
+      <span><strong>Building</strong> · <a href="https://getmoneycompass.com" target="_blank" rel="noopener">getmoneycompass.com</a></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="metrics">
+    <div class="metric"><b>300+</b><span>engineers — global organizations built and scaled across US, India, Japan</span></div>
+    <div class="metric"><b>~40%</b><span>measured developer-productivity gain from org-wide AI-native SDLC transformation</span></div>
+    <div class="metric"><b>$5B+</b><span>quarterly loan disbursals on lending platforms serving 50+ financial institutions</span></div>
+    <div class="metric"><b>2M+</b><span>daily shipments at 99.5% SLA — 4M+ at peak — on modernized commerce logistics</span></div>
+    <div class="metric"><b>3×</b><span>global engineering centers founded from the first hire; twice a founding CTO</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>What I Do</h2>
+    <p class="lede">Twelve years in Silicon Valley, then global engineering leadership across the US, India, and Japan — organizations scaled to 300+ through hypergrowth, turnaround, and IPO. A builder-executive: from board strategy to code review in the same day.</p>
+    <div class="pillars">
+      <div class="pillar"><h3>AI-First Engineering Transformation</h3><p>Transformed how a 150+ engineer organization builds software — LLM tooling, eval gates in CI, governance guardrails — a measured ~40% gain, sustained.</p></div>
+      <div class="pillar"><h3>Agentic Platforms, Hands-On</h3><p>Builds and operates the full agentic stack — orchestration, RAG, model gateways, evaluation, human-in-the-loop. Knows from daily practice what AI can own in production, and what it cannot.</p></div>
+      <div class="pillar"><h3>Platforms &amp; Distributed Systems</h3><p>Rebuilt live platforms at national scale with no operational pause. Owns the keep/replace/rebuild calls, the build-vs-buy decisions, and the consequences — through IPO, under regulators.</p></div>
+      <div class="pillar"><h3>Global Leadership &amp; Talent</h3><p>Three global engineering centers built from the first hire, with the hiring bar owned personally — including one organization rebuilt from crisis-level attrition to best-in-class.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="now">
+  <div class="wrap">
+    <h2>Building Now</h2>
+    <div class="spotlight">
+      <h3>MoneyCompass — Founder &amp; CTO <span style="font-weight:400;opacity:.8">· Oct 2025 – Present</span></h3>
+      <p>An AI financial advisor, architected and built solo — in production beta across web and native iOS. The core design: an LLM bounded to judgment over a 42-engine deterministic layer that supplies every number, behind a compliance gate with deterministic veto and an immutable audit trail.</p>
+      <div class="chips">
+        <span class="chip">Agentic orchestration</span><span class="chip">RAG · pgvector</span><span class="chip">Provider-agnostic LLM gateway</span><span class="chip">Evaluation harness · LLM judges</span><span class="chip">Per-call cost metering</span><span class="chip">Human-in-the-loop</span><span class="chip">Python · Flask · Celery</span><span class="chip">Native iOS</span>
+      </div>
+      <p style="margin-top:16px"><a href="https://getmoneycompass.com" target="_blank" rel="noopener">getmoneycompass.com →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <h2>Career</h2>
+
+    <div class="role">
+      <div class="when">2023 – 2025<em>Bangalore &amp; Tokyo</em></div>
+      <div>
+        <h3>Mercari Japan <span>— Head of Global Engineering</span></h3>
+        <div class="tagline">Japan's largest C2C marketplace — a global capability center and an AI-native SDLC, both built from zero</div>
+        <ul>
+          <li>Built the company's first engineering center outside Japan — <b>zero to 150+</b> engineers, managers, and architects.</li>
+          <li>Operationalized AI-assisted and agentic development org-wide — a <b>measured ~40% productivity improvement</b>, instrumented through DORA metrics and sustained through enablement rather than mandate.</li>
+          <li>Shipped AI into the product: a RAG support agent deflecting <b>40% of tickets (~$1.2M/yr)</b>, AI listing descriptions lifting sales ~12%.</li>
+          <li>Board-level technology voice influencing <b>$50M+</b> in platform investment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2020 – 2022<em>Bangalore</em></div>
+      <div>
+        <h3>Paytm <span>— SVP of Engineering</span></h3>
+        <div class="tagline">India's leading payments super-app — 300M+ users, through the 2021 IPO</div>
+        <ul>
+          <li>Led a <b>200+ engineer</b> organization across commerce and central platform services powering every transaction — billions a month across UPI, wallet, cards, and BNPL rails.</li>
+          <li>Lending platforms serving <b>50+ banks at $5B+ quarterly disbursals</b> — real-time ML decisioning at sub-200ms, auditable under PCI and central-bank regulation.</li>
+          <li><b>99.9% uptime</b> through the IPO quarter; incident MTTR from 4 hours to 30 minutes; cloud costs cut 40%.</li>
+          <li>Rebuilt the organization from <b>35% attrition to 8%</b>, with a strengthened leadership bench.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2016 – 2020<em>Bangalore &amp; Sunnyvale</em></div>
+      <div>
+        <h3>Walmart &amp; Flipkart <span>— Senior Director of Engineering</span></h3>
+        <div class="tagline">Core logistics platforms for India's largest e-commerce operation — a turnaround delivered mid-flight</div>
+        <ul>
+          <li>Re-architected a struggling legacy monolith into <b>15+ event-driven microservices</b> with no operational pause — delivery velocity up ~40% at <b>2M+ daily shipments (4M+ peak)</b>, 99.5% SLA.</li>
+          <li>Owned the logistics portfolio end to end: last-mile delivery, route optimization, ML address intelligence, demand–supply matching, network management, first-mile pickup.</li>
+          <li>Peak-season engineering for Big Billion Days: <b>10X traffic, 20M+ orders, zero outages</b>; omni-channel returns across Walmart US ~40% faster.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2015 – 2016<em>Bangalore</em></div>
+      <div>
+        <h3>Novopay (Khosla Labs) <span>— Founding CTO</span></h3>
+        <div class="tagline">Regulated payments from zero, under a central-bank license</div>
+        <ul>
+          <li>Greenfield wallet and retail-POS platform — <b>1M+ transactions a month within nine months</b> of first code, across 15+ partner banks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2013 – 2014<em>Bangalore &amp; Sunnyvale</em></div>
+      <div>
+        <h3>Yahoo <span>— Director of Engineering</span></h3>
+        <div class="tagline">Real-time data and ML platforms for 300M+ users</div>
+        <ul>
+          <li><b>10TB+/day on Spark</b>; a million events a second; ML in production driving ~35% engagement lift; 50+ A/B experiments a quarter.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2010 – 2013<em>Bangalore</em></div>
+      <div>
+        <h3>HomeShop18 <span>— Founding CTO</span></h3>
+        <div class="tagline">Multi-channel commerce from zero — TV, web, mobile</div>
+        <ul>
+          <li>Built the platform and a <b>150-member technology organization</b> from zero to <b>$200M+ GMV</b>, supporting a $70M raise; live-broadcast spikes of 10X at 99.5% availability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">2007 – 2010<em>Chennai &amp; Seattle</em></div>
+      <div>
+        <h3>Amazon <span>— Manager III, Software Development</span></h3>
+        <div class="tagline">The Digital Platform — Kindle, Video, and Music — and global pricing</div>
+        <ul>
+          <li>Designed the Global Pricing Service (DIPS) for <b>100+ countries</b> from day one — new-country launches cut from six months to two weeks as ebook revenue grew $100M → $500M+.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">1997 – 2007<em>Silicon Valley</em></div>
+      <div>
+        <h3>Earlier <span>— Charles Schwab · Instantis (Oracle) · NASA Ames</span></h3>
+        <div class="tagline">A first decade hands-on in Java, on systems that could not fail</div>
+        <ul>
+          <li><b>NASA Ames:</b> mission-critical middleware for the Mars Exploration Rovers — published at the ACM Middleware Conference; five NASA awards including the NASA Honor Award.</li>
+          <li><b>Charles Schwab:</b> investor-facing platforms at 99.99% reliability, including Portfolio Checker — Schwab's first investment-advice product.</li>
+          <li><b>Instantis:</b> multi-tenant enterprise SaaS for Fortune 500 customers; acquired by Oracle.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <h2>Credentials</h2>
+    <div class="creds">
+      <div class="cred"><h3>Publication</h3><p>"Middleware and Web Services for the Collaborative Information Portal of NASA's Mars Exploration Rovers Mission" — ACM/IFIP/USENIX Middleware Conference.</p></div>
+      <div class="cred"><h3>Recognition</h3><p>Five NASA awards, including the NASA Honor Award and the Administrator's "Turning Goals into Reality" Award.</p></div>
+      <div class="cred"><h3>Education</h3><p>M.S. Information Systems, University of San Francisco (GPA 3.98/4.0) · B.S. Electronics &amp; Communications Engineering, Andhra University.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cta">Building something that needs an engineering leader who still ships?</div>
+    <p><a href="mailto:vmagapu@gmail.com">vmagapu@gmail.com</a> · <a href="https://linkedin.com/in/magapu" target="_blank" rel="noopener">linkedin.com/in/magapu</a></p>
+    <p style="margin-top:18px;font-size:13px">© Vish Magapu · San Jose, CA</p>
+  </div>
+</footer>
+
+</body>
+</html>
